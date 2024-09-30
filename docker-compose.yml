@@ -1,0 +1,10 @@
+services:
+  rust-academic-project:
+    network_mode: "host"
+    container_name: rust-academic-project
+    image: rust-academic-project
+    build: .
+    working_dir: "/rust-academic-project"
+    command: tail -f /dev/null
+    volumes:
+      - ./:/rust-academic-project
